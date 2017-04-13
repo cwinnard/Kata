@@ -23,7 +23,10 @@ public class EditingManager {
 	}
 
 	public String edit(String toBeReplaced, String replacement, String text) {
-		// TODO Auto-generated method stub
-		return null;
+		String edited = "";
+		
+		edited = text.replace(toBeReplaced, replacement);
+		
+		return edited;
 	}
 }
