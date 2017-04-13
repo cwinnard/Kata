@@ -6,7 +6,7 @@ public class Degrader {
 		int weightedLength = 0;
 		char[] characters = input.toCharArray();
 		for (char c: characters) {
-			int intValue = (int) c;
+			int intValue = c;
 			if (intValue == 32) {
 				continue;
 			}
