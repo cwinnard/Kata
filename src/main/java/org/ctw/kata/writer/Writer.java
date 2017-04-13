@@ -10,7 +10,7 @@ public class Writer {
 		StringBuilder sb = new StringBuilder(existingText);
 		char[] inputChars = input.toCharArray();
 		
-		//TODO: This will probably be removed, relic of previous tests.  
+		//TODO: This would be removed, relic of previous tests.  
 		durabilityManager.countInputLength(input);
 		
 		int charCounter = 0;
