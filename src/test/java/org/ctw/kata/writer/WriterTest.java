@@ -25,4 +25,10 @@ public class WriterTest {
 		String written = writer.write("1-2-1-2 this is just a test");
 		assertThat(written, is("1-2-1-2 this is just a test"));
 	}
+	
+	@Test
+	public void testReadsFile() throws Exception {
+		String read = writer.readFile();
+		assertThat(read, is("Read from file"));
+	}
 }
