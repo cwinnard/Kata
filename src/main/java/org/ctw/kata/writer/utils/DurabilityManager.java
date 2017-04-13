@@ -28,4 +28,9 @@ public class DurabilityManager {
 	public int dull(String input) {
 		return this.durability - this.countInputLength(input);
 	}
+
+	public void sharpen() {
+		// TODO Auto-generated method stub
+		
+	}
 }

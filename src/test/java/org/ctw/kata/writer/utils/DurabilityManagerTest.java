@@ -59,4 +59,11 @@ public class DurabilityManagerTest {
 		int durability = degrader.dull("AAaa");
 		assertThat(durability, is(24));
 	}
+	
+	@Test
+	public void testSharpen_ReturnsDurabilityTo30() throws Exception {
+		degrader.durability = 0;
+		degrader.sharpen();
+		assertThat(degrader.durability, is(30));
+	}
 }
