@@ -1,1 +1,21 @@
-Read me
+Dependencies are managed using maven.  
+To install, run mvn install.
+To run tests, run mvn test.
+
+This kata was particularly interesting to me becuase it focused more on showcasing testing and class creation and less on the final product.
+I enjoyed iterating through my thought process, using tests of course, to figure out where each piece of functionality was best suited to live.
+I'm sure you will look through my commits, but I wanted to provide a quick run down of the decisions I made and why I made them.
+
+My first instinct was to create the ability to write.  After all, this was an exercise in putting pencil to paper.
+Once the simple ability to write was added, I wanted to tackle the durability aspects of the requirements.  These were the tough logical puzzles.
+I started with a degrader class to handle dulling, but then realized that it made sense to handle sharpening in the same area.  Thus the DurabilityManager was born.
+I applied that same Manager pattern to the editing functionality of erasing and replacing words.  
+
+I am aware that my app falls short of being able to run from start to finish.  I felt it more pertinent to focus on breaking down requirements,
+writing good tests, and maintaining clean and logical code.  I faltered when testing the more in depth features of the manager classes, but I 
+wanted to showcase my knowledge of the Mockito framework as much as possible.  
+
+If I were to follow this kata through to completion, I would take the following steps in order:
+1) Update manager classes to be properly testable using mocks.
+2) Weave the more intricate manager functionality into the writer class.
+3) Improve the main method to take in different user inputs and execute the backing logic.
