@@ -4,6 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -63,5 +64,11 @@ public class WriterTest {
 		String written = writer.write(longString, "");
 		assertThat(written, is(thirty));
 		
+	}
+	
+	@Test
+	public void testDullMethodIsCalledAtLeastOnce() throws Exception {
+		String written = writer.write(" ", " ");
+		verify(mockDurabilityManager, atLeast(1)).dull(anyString());
 	}
 }
