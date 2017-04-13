@@ -18,4 +18,9 @@ public class Degrader {
 		}
 		return weightedLength;
 	}
+
+	public boolean shouldWrite(String string) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

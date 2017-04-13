@@ -1,7 +1,7 @@
 package org.ctw.kata.writer.utils;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,5 +34,11 @@ public class DegraderTest {
 	public void testCountsInput_Assigns2ToCapitalLetters_WhereInputsAreEdgeCases() throws Exception {
 		int weightedLength = degrader.countInputLength("AA aa ZZ zz");
 		assertThat(weightedLength, is(12));
+	}
+	
+	@Test
+	public void testShouldReturnTrue_WhileInputStringLengthLessThanDurability() throws Exception {
+		boolean writable = degrader.shouldWrite("test string");
+		assertTrue(writable);
 	}
 }
