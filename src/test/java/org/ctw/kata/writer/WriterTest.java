@@ -9,6 +9,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import org.ctw.kata.writer.utils.DurabilityManager;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -27,9 +28,14 @@ public class WriterTest {
 	private String longString = "This is a very LONG string. Why did I use THIRTY as the default durability.";
 	private String thirty = "This is a very LONG string. Wh";
 	
+	@Before
+	public void setup() {
+		when(mockDurabilityManager.getDurability()).thenReturn(30);
+	}
+	
 	@Test
 	public void testReturnsString() throws Exception {
-		String written = writer.write("", "");
+		String written = writer.write(" ", " ");
 		assertTrue(written instanceof String);
 	}
 	
@@ -48,13 +54,12 @@ public class WriterTest {
 	@Test
 	public void testDurabilityManagerCountsWeightedLengthOfInputToWriter() throws Exception {
 		when(mockDurabilityManager.countInputLength(anyString())).thenReturn(5);
-		String written = writer.write("", "");
+		String written = writer.write(" ", " ");
 		verify(mockDurabilityManager).countInputLength(anyString());
 	}
 	
 	@Test
 	public void testWriteOnlyOutputsCharacters_WhenDurabilityIsHighEnough() throws Exception {
-		when(mockDurabilityManager.getDurability()).thenReturn(30);
 		String written = writer.write(longString, "");
 		assertThat(written, is(thirty));
 		
