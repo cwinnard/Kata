@@ -14,9 +14,12 @@ public class Writer {
 		durabilityManager.countInputLength(input);
 		
 		int charCounter = 0;
+		
+		//In a bad spot using the durability manager property here.  Logic is sound, but struggling with the mock
 		while (durabilityManager.durability > 0) {
 			sb.append(inputChars[charCounter]);
 			durabilityManager.dull(String.valueOf(inputChars[charCounter]));
+			charCounter++;
 		}
 		
 		return sb.toString();
