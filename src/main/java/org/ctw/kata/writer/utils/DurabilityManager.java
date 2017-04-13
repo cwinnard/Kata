@@ -4,6 +4,14 @@ public class DurabilityManager {
 	
 	public int durability = 30;
 
+	public int getDurability() {
+		return durability;
+	}
+
+	public void setDurability(int durability) {
+		this.durability = durability;
+	}
+
 	public int countInputLength(String input) {
 		int weightedLength = 0;
 		char[] characters = input.toCharArray();

@@ -4,6 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -53,6 +54,7 @@ public class WriterTest {
 	
 	@Test
 	public void testWriteOnlyOutputsCharacters_WhenDurabilityIsHighEnough() throws Exception {
+		when(mockDurabilityManager.getDurability()).thenReturn(30);
 		String written = writer.write(longString, "");
 		assertThat(written, is(thirty));
 		
