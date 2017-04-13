@@ -25,7 +25,7 @@ public class DurabilityManager {
 		return this.countInputLength(input) <= this.durability;
 	}
 
-	public int dull(String string) {
-		return this.durability;
+	public int dull(String input) {
+		return this.durability - this.countInputLength(input);
 	}
 }
