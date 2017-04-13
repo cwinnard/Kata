@@ -1,12 +1,8 @@
 package org.ctw.kata.writer;
 
 public class Writer {
-
-	public String write(String input) {
+	
+	public String write(String input, String existingText) {
 		return input;
-	}
-
-	public String readFile() {
-		return null;
 	}
 }

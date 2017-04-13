@@ -16,19 +16,19 @@ public class WriterTest {
 	
 	@Test
 	public void testReturnsString() throws Exception {
-		String written = writer.write("");
+		String written = writer.write("", "");
 		assertTrue(written instanceof String);
 	}
 	
 	@Test
 	public void testReturnsInputString() throws Exception {
-		String written = writer.write("1-2-1-2 this is just a test");
+		String written = writer.write("1-2-1-2 this is just a test", "");
 		assertThat(written, is("1-2-1-2 this is just a test"));
 	}
 	
 	@Test
-	public void testReadsFile() throws Exception {
-		String read = writer.readFile();
-		assertThat(read, is("Read from file"));
+	public void testAddsInputToExisting() throws Exception {
+		String written = writer.write("new text.", "existing text.");
+		assertThat(written, is("new text.existing text."));
 	}
 }
