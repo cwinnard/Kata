@@ -21,6 +21,6 @@ public class Degrader {
 
 	public boolean shouldWrite(String string) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 }
