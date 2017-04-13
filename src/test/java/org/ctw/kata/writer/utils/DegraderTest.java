@@ -27,8 +27,14 @@ public class DegraderTest {
 	}
 	
 	@Test
-	public void testCountsInout_Assigns2ToCapitalLetters() throws Exception {
+	public void testCountsInput_Assigns2ToCapitalLetters() throws Exception {
 		int lengthConsideringCapitals = degrader.countInputLength("abcDEF");
 		assertThat(lengthConsideringCapitals, is(9));
+	}
+	
+	@Test
+	public void testCountsInput_Assigns2ToCapitalLetters_WhereInputsAreEdgeCases() throws Exception {
+		int weightedLength = degrader.countInputLength("AA aa ZZ zz");
+		assertThat(weightedLength, is(12));
 	}
 }
