@@ -18,7 +18,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 public class WriterTest {
 	
 	@Mock
-	DurabilityManager mockDegrader;
+	DurabilityManager mockDurabilityManager;
 	
 	@InjectMocks
 	Writer writer = new Writer();
@@ -43,8 +43,8 @@ public class WriterTest {
 	
 	@Test
 	public void testDegraderCountsWeightedLengthOfInputToWriter() throws Exception {
-		when(mockDegrader.countInputLength(anyString())).thenReturn(5);
+		when(mockDurabilityManager.countInputLength(anyString())).thenReturn(5);
 		String written = writer.write("", "");
-		verify(mockDegrader).countInputLength(anyString());
+		verify(mockDurabilityManager).countInputLength(anyString());
 	}
 }
