@@ -30,7 +30,8 @@ public class DurabilityManager {
 		return this.durability;
 	}
 
-	public void sharpen() {
+	public int sharpen() {
 		this.durability = 30;
+		return this.durability;
 	}
 }
