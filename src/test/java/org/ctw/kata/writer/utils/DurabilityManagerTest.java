@@ -66,4 +66,10 @@ public class DurabilityManagerTest {
 		degrader.sharpen();
 		assertThat(degrader.durability, is(30));
 	}
+	
+	@Test
+	public void testDull_ReducesDurability_AndPersistsThatChange() throws Exception {
+		degrader.dull("Hire Me Pillar");
+		assertThat(degrader.durability, is(15));
+	}
 }
