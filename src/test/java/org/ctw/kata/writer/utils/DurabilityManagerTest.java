@@ -53,4 +53,10 @@ public class DurabilityManagerTest {
 		int durability = degrader.dull("12345");
 		assertThat(durability, is(25));
 	}
+	
+	@Test
+	public void testDull_ReducesDurability_WithCapitalLetters() throws Exception {
+		int durability = degrader.dull("AAaa");
+		assertThat(durability, is(24));
+	}
 }
