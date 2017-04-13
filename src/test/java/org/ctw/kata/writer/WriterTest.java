@@ -42,7 +42,7 @@ public class WriterTest {
 	}
 	
 	@Test
-	public void testDegraderCountsWeightedLengthOfInputToWriter() throws Exception {
+	public void testDurabilityManagerCountsWeightedLengthOfInputToWriter() throws Exception {
 		when(mockDurabilityManager.countInputLength(anyString())).thenReturn(5);
 		String written = writer.write("", "");
 		verify(mockDurabilityManager).countInputLength(anyString());
