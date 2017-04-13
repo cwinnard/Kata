@@ -7,7 +7,7 @@ import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import org.ctw.kata.writer.utils.Degrader;
+import org.ctw.kata.writer.utils.DurabilityManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -18,7 +18,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 public class WriterTest {
 	
 	@Mock
-	Degrader mockDegrader;
+	DurabilityManager mockDegrader;
 	
 	@InjectMocks
 	Writer writer = new Writer();

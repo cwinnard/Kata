@@ -1,6 +1,6 @@
 package org.ctw.kata.writer.utils;
 
-public class Degrader {
+public class DurabilityManager {
 	
 	public int durability = 30;
 

@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class DegraderTest {
+public class DurabilityManagerTest {
 	
-	Degrader degrader = new Degrader();
+	DurabilityManager degrader = new DurabilityManager();
 	
 	@Test
 	public void testCountsInput() throws Exception {
