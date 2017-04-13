@@ -30,7 +30,6 @@ public class DurabilityManager {
 	}
 
 	public void sharpen() {
-		// TODO Auto-generated method stub
-		
+		this.durability = 30;
 	}
 }
