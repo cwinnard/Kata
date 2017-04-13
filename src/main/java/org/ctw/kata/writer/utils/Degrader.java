@@ -22,6 +22,6 @@ public class Degrader {
 	}
 
 	public boolean shouldWrite(String input) {
-		return input.length() <= durability;
+		return this.countInputLength(input) <= durability;
 	}
 }
