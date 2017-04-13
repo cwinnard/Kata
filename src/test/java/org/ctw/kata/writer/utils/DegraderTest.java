@@ -41,4 +41,10 @@ public class DegraderTest {
 		boolean writable = degrader.shouldWrite("test");
 		assertTrue(writable);
 	}
+	
+	@Test
+	public void testShouldReturnFalse_WhileInputStringGreaterThanDurability() throws Exception {
+		boolean writable = degrader.shouldWrite("1234567890123456789012345678901234567890");
+		assertFalse(writable);
+	}
 }
