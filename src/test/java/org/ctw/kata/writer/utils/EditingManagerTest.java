@@ -29,4 +29,10 @@ public class EditingManagerTest {
 		String edited = editor.edit("apple", "onion", "an apple a day keeps the doctor away");
 		assertThat(edited, is("an onion a day keeps the doctor away"));
 	}
+	
+	@Test
+	public void testEditReplacesTextOfGreaterLength() throws Exception {
+		String edited = editor.edit("apple", "artichoke", "an apple a day keeps the doctor away");
+		assertThat(edited, is("an artich@k@ay keeps the doctor away"));
+	}
 }
