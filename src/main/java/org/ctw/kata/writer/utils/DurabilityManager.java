@@ -26,7 +26,8 @@ public class DurabilityManager {
 	}
 
 	public int dull(String input) {
-		return this.durability - this.countInputLength(input);
+		this.durability = this.durability - this.countInputLength(input);
+		return this.durability;
 	}
 
 	public void sharpen() {
