@@ -1,6 +1,8 @@
 package org.ctw.kata.writer.utils;
 
 public class Degrader {
+	
+	private int durability = 30;
 
 	public int countInputLength(String input) {
 		int weightedLength = 0;
@@ -19,8 +21,7 @@ public class Degrader {
 		return weightedLength;
 	}
 
-	public boolean shouldWrite(String string) {
-		// TODO Auto-generated method stub
-		return true;
+	public boolean shouldWrite(String input) {
+		return input.length() <= durability;
 	}
 }

@@ -38,7 +38,7 @@ public class DegraderTest {
 	
 	@Test
 	public void testShouldReturnTrue_WhileInputStringLengthLessThanDurability() throws Exception {
-		boolean writable = degrader.shouldWrite("test string");
+		boolean writable = degrader.shouldWrite("test");
 		assertTrue(writable);
 	}
 }
