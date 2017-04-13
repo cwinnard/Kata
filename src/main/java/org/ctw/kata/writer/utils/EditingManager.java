@@ -6,7 +6,13 @@ public class EditingManager {
 		String erased = "";
 		
 		if (text.contains(toBeErased)) {
-			erased = text.replace(toBeErased, "     ");
+			StringBuilder spacesBuilder = new StringBuilder();
+			int numSpaces = toBeErased.length();
+			for (int i = numSpaces; i > 0; i--) {
+				spacesBuilder.append(" ");
+			}
+			
+			erased = text.replace(toBeErased, spacesBuilder.toString());
 		}
 		
 		return erased;
