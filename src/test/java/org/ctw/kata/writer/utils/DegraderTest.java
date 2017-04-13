@@ -25,4 +25,10 @@ public class DegraderTest {
 		int lengthSansSpaces = degrader.countInputLength("123 456");
 		assertThat(lengthSansSpaces, is(6));
 	}
+	
+	@Test
+	public void testCountsInout_Assigns2ToCapitalLetters() throws Exception {
+		int lengthConsideringCapitals = degrader.countInputLength("abcDEF");
+		assertThat(lengthConsideringCapitals, is(9));
+	}
 }
