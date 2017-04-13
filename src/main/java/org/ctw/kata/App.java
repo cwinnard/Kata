@@ -1,5 +1,7 @@
 package org.ctw.kata;
 
+import org.ctw.kata.writer.Writer;
+
 /**
  * Hello world!
  *
@@ -8,6 +10,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	Writer appWriter = new Writer();
+    	
+        System.out.println(appWriter.write("World!!", "Hello "));
     }
 }
