@@ -23,4 +23,10 @@ public class EditingManagerTest {
 		String erased = editor.erase("begone demon string", "he said begone demon string, to hell with you!");
 		assertThat(erased, is("he said                    , to hell with you!"));
 	}
+	
+	@Test
+	public void testEditReplacesTextOfSameLength() throws Exception {
+		String edited = editor.edit("apple", "onion", "an apple a day keeps the doctor away");
+		assertThat(edited, is("an onion a day keeps the doctor away"));
+	}
 }

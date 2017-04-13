@@ -7,7 +7,6 @@ public class EditingManager {
 		
 		if (text.contains(toBeErased)) {
 			String numSpaces = countNumberOfSpaces(toBeErased);
-			
 			erased = text.replace(toBeErased, numSpaces);
 		}
 		
@@ -21,5 +20,10 @@ public class EditingManager {
 			spacesBuilder.append(" ");
 		}
 		return spacesBuilder.toString();
+	}
+
+	public String edit(String toBeReplaced, String replacement, String text) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
