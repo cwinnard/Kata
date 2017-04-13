@@ -14,7 +14,6 @@ public class Writer {
 		durabilityManager.countInputLength(input);
 		
 		int charCounter = 0;
-		
 		//In a bad spot using the durability manager property here.  Logic is sound, but struggling with the mock
 		int durability = durabilityManager.getDurability();
 		while (durability > 0) {
