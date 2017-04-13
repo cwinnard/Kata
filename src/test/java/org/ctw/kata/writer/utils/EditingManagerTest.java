@@ -17,4 +17,10 @@ public class EditingManagerTest {
 		String erased = editor.erase("erase", "this should be erased");
 		assertThat(erased, is("this should be      d"));
 	}
+	
+	@Test
+	public void testEraseRemovesString_OfLengthOtherThan5() throws Exception {
+		String erased = editor.erase("begone demon string", "he said begone demon string, to hell with you!");
+		assertThat(erased, is("he said                    , to hell with you!"));
+	}
 }
