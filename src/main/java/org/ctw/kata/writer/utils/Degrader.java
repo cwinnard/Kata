@@ -6,10 +6,15 @@ public class Degrader {
 		int weightedLength = 0;
 		char[] characters = input.toCharArray();
 		for (char c: characters) {
-			if (c == ' ') {
+			int intValue = (int) c;
+			if (intValue == 32) {
 				continue;
 			}
-			weightedLength++;
+			if (65 <= intValue && intValue <= 96) {
+				weightedLength += 2;
+			} else {
+				weightedLength++;
+			}
 		}
 		return weightedLength;
 	}
