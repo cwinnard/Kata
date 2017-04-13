@@ -22,6 +22,10 @@ public class DurabilityManager {
 	}
 
 	public boolean shouldWrite(String input) {
-		return this.countInputLength(input) <= durability;
+		return this.countInputLength(input) <= this.durability;
+	}
+
+	public int dull(String string) {
+		return this.durability;
 	}
 }

@@ -47,4 +47,10 @@ public class DurabilityManagerTest {
 		boolean writable = degrader.shouldWrite("1234567890123456789012345678901234567890");
 		assertFalse(writable);
 	}
+	
+	@Test
+	public void testDull_ReducesDurabilityEqualToWeightedLengthOfInput() throws Exception {
+		int durability = degrader.dull("12345");
+		assertThat(durability, is(25));
+	}
 }
