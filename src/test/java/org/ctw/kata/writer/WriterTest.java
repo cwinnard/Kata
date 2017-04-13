@@ -44,6 +44,7 @@ public class WriterTest {
 	@Test
 	public void testDegraderCountsWeightedLengthOfInputToWriter() throws Exception {
 		when(mockDegrader.countInputLength(anyString())).thenReturn(5);
-		verify(mockDegrader.countInputLength(anyString()));
+		String written = writer.write("", "");
+		verify(mockDegrader).countInputLength(anyString());
 	}
 }
