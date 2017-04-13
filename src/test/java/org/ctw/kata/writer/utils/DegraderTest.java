@@ -1,9 +1,7 @@
 package org.ctw.kata.writer.utils;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
-
-import java.awt.datatransfer.StringSelection;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
