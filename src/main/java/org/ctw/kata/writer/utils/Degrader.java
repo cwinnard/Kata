@@ -2,7 +2,7 @@ package org.ctw.kata.writer.utils;
 
 public class Degrader {
 	
-	private int durability = 30;
+	public int durability = 30;
 
 	public int countInputLength(String input) {
 		int weightedLength = 0;
