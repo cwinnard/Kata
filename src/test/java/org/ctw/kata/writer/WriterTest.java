@@ -54,7 +54,7 @@ public class WriterTest {
 	@Test
 	public void testWriteOnlyOutputsCharacters_WhenDurabilityIsHighEnough() throws Exception {
 		String written = writer.write(longString, "");
-		assertThat(longString, is(thirty));
+		assertThat(written, is(thirty));
 		
 	}
 }
