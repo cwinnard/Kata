@@ -5,7 +5,7 @@ public class Degrader {
 	public int countInputLength(String input) {
 		int weightedLength = 0;
 		char[] characters = input.toCharArray();
-		for (char c: characters) {
+		for (char c : characters) {
 			int intValue = c;
 			if (intValue == 32) {
 				continue;
@@ -18,5 +18,4 @@ public class Degrader {
 		}
 		return weightedLength;
 	}
-	
 }
