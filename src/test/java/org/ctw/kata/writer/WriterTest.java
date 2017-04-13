@@ -23,6 +23,9 @@ public class WriterTest {
 	@InjectMocks
 	Writer writer = new Writer();
 	
+	private String longString = "This is a very LONG string. Why did I use THIRTY as the default durability.";
+	private String thirty = "This is a very LONG string. Wh";
+	
 	@Test
 	public void testReturnsString() throws Exception {
 		String written = writer.write("", "");
@@ -46,5 +49,12 @@ public class WriterTest {
 		when(mockDurabilityManager.countInputLength(anyString())).thenReturn(5);
 		String written = writer.write("", "");
 		verify(mockDurabilityManager).countInputLength(anyString());
+	}
+	
+	@Test
+	public void testWriteOnlyOutputsCharacters_WhenDurabilityIsHighEnough() throws Exception {
+		String written = writer.write(longString, "");
+		assertThat(longString, is(thirty));
+		
 	}
 }
