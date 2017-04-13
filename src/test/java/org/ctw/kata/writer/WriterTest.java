@@ -29,6 +29,6 @@ public class WriterTest {
 	@Test
 	public void testAddsInputToExisting() throws Exception {
 		String written = writer.write("new text.", "existing text.");
-		assertThat(written, is("new text.existing text."));
+		assertThat(written, is("existing text.new text."));
 	}
 }
